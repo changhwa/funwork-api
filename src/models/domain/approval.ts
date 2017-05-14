@@ -1,7 +1,7 @@
 import {Table, Column, Model, PrimaryKey, Default} from "sequelize-typescript";
 
 @Table
-export default class Payment extends Model<Payment> {
+export default class Approval extends Model<Approval> {
 
   //일련번호
   @Column({primaryKey: true})

@@ -1,7 +1,7 @@
 import {Sequelize} from "sequelize-typescript";
 import DataSource from "../config/data-source";
 import Employee from "./domain/employee";
-import Payment from "./domain/payment";
+import Approval from "./domain/approval";
 
 class DatabaseConfig {
 
@@ -12,9 +12,9 @@ class DatabaseConfig {
 			...new DataSource().getConfig
 		});
 		sequelize.addModels([Employee]);
+    sequelize.addModels([Approval]);
+
 		this._sequelize = sequelize;
-        sequelize.addModels([Payment]);
-        this._sequelize = sequelize;
 	}
 
 	get getSequelize() {
